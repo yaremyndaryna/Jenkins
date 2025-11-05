@@ -7,14 +7,14 @@ pipeline {
                 script {
                     sh '''
                         echo "Updating system..."
-                        apt update -y
+                        sudo apt update -y
 
                         echo "Installing Apache2..."
-                        apt install apache2 -y
+                        sudo apt install apache2 -y
 
                         echo "Starting Apache2..."
-                        systemctl enable apache2
-                        systemctl start apache2
+                        sudo systemctl enable apache2
+                        sudo systemctl start apache2
 
                         echo "Apache2 installed and running!"
                     '''
